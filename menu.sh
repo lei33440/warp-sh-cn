@@ -193,7 +193,7 @@ check_system() {
     RELEASE=("Debian" "Ubuntu" "CentOS" "Alpine" "Arch" "Fedora")
 
     for int in "${!REGEX[@]}"; do
-        [[ "${SYS,,}" =~ ${REGEX[int]}]] && SYSTEM="${RELEASE[int]}" && break
+        [[ "${SYS,,}" =~ ${REGEX[int]} ]] && SYSTEM="${RELEASE[int]}" && break
     done
 
     # 如果未识别，尝试其他方式
